@@ -29,7 +29,7 @@ transactions.delete("/:arrayIndex", (req, res) => {
 transactions.put("/:arrayIndex", (req, res) => {
   const { arrayIndex } = req.params;
   transactionsData[arrayIndex] = req.body;
-  req.status(200).json(transactionsData[arrayIndex]);
+  res.status(200).json(transactionsData[arrayIndex]);
 });
 
 module.exports = transactions;
